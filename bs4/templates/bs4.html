@@ -1,0 +1,32 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>
+        {% block title %}
+
+        {% endblock %}
+    </title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="{% static "bootstrap/bootstrap/dist/css/bootstrap.min.css" %}">
+    {% block custom_css %}
+        <link rel="stylesheet" href="{% static "css/style.css" %}">
+        <link rel="stylesheet" href="{% static "bootstrap/font-awesome/css/font-awesome.min.css" %}">
+        <link rel="stylesheet" href="{% static "bootstrap/bootstrap-social/bootstrap-social.css" %}">
+    {% endblock %}
+</head>
+<body>
+    {% block content %}
+
+    {% endblock %}
+
+    <script src="{% static "bootstrap/jquery/dist/jquery.min.js" %}"></script>
+    <script src="{% static "bootstrap/popper.js/dist/umd/popper.min.js" %}"></script>
+    <script src="{% static "bootstrap/bootstrap/dist/js/bootstrap.min.js" %}"></script>
+    {% block custom_js %}
+    
+    {% endblock %}
+</body>
+</html>
